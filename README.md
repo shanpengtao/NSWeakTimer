@@ -2,7 +2,8 @@
 
 本工程为解决NSTimer引起的循环引用，使用方法如下：
 
-1. 将NSWeakProxy和NSTimer+WeakTime两个类导入。
+1. 将NSWeakProxy和NSTimer+WeakTime两个类导入
+
 2. 直接使用系统方法：
   + (NSTimer *)scheduledTimerWithTimeInterval:(NSTimeInterval)ti 
                                        target:(id)aTarget
