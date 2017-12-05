@@ -9,7 +9,7 @@
                                        target:(id)aTarget
                                        selector:(SEL)aSelector
                                        userInfo:(nullable id)userInfo
-                                       repeats:(BOOL)yesOrNo;
+                                       repeats:(BOOL)yesOrNo;
 
 3. 第二种方式，引入头文件NSTimer+WeakTime.h,并使用自定义方法：
   + (NSTimer *)scheduledTimerWithTimeInterval:(NSTimeInterval)interval
