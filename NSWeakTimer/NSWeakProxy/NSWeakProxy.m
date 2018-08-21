@@ -10,6 +10,10 @@
 @implementation NSWeakProxy
 
 - (instancetype)initWithTarget:(id)target {
+    // 防止不支持weak修饰的对象进行weak造成的崩溃（ag：NSMachPort）
+    if (![target allowsWeakReference]) {
+        return target;
+    }
     _target = target;
     return self;
 }
